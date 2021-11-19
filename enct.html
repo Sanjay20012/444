@@ -1,0 +1,31 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>Encrypter / Decrypter</title>
+    <script type="text/javascript" src="encrypter.js"></script>
+	<script type="text/javascript" src="testcases.js"></script>
+  </head>
+  <body>
+    <h1>Encrypter / Decrypter</h1>
+
+
+    <fieldset>
+      <legend>Inputs:</legend> 
+      <label for="key">Encryption/decryption key:</label><br />
+      <input type="inputText" id="key" name="key" value="password"/><br />
+      <label for="text">Text to encrypt or decrypt:</label><br />
+      <textarea rows="10" cols="70" id="inputText">Type something here...</textarea><br />
+      <input type="button" value="Encrypt" onclick="onClickEncrypt('inputText', 'key', 'outputText');" />
+      <input type="button" value="Decrypt" onclick="onClickDecrypt('inputText', 'key', 'outputText');" />
+	  <input type="button" value="Swap in/out" onclick="onClickSwap('inputText', 'outputText');" />
+	  <input type="button" value="Run tests" onclick="onClickTests()" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Output:</legend>
+	  <textarea id="outputText" rows="10" cols="70"></textarea>
+    </fieldset>
+  </body>
+</html>
